@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://106.14.91.142:5432/roco
+    username: postgres
+    password: 123456
+
+  jpa:
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+
+  servlet:
+    multipart:
+      max-request-size: -1
+      max-file-size: -1
