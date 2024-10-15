@@ -7,6 +7,9 @@ docker rmi ${name}:latest
 
 echo "卸载缓存成功"
 
+mvn package
+echo "构建完成"
+
 docker build -t ${name} .
 echo "镜像构建成功"
 
