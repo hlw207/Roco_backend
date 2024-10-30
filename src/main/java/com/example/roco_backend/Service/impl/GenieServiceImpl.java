@@ -4,6 +4,7 @@ import com.example.roco_backend.Dao.GenieDao;
 import com.example.roco_backend.Dao.ManaGenieDao;
 import com.example.roco_backend.Pojo.Vo.Genie;
 import com.example.roco_backend.Pojo.Vo.GenieSimple;
+import com.example.roco_backend.Pojo.Vo.ManaGenie;
 import com.example.roco_backend.Service.GenieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,13 +21,13 @@ public class GenieServiceImpl implements GenieService {
     private ManaGenieDao manaGenieDao;
 
     @Override
-    public List<GenieSimple> getGeniesByAttribute(String attribute) {
+    public List<Genie> getGeniesByAttribute(String attribute) {
         System.out.println(attribute);
         return genieDao.findNameByAttribute(attribute);
     }
 
     @Override
-    public List<Genie> getManaGeniesByAttribute(String attribute) {
+    public List<ManaGenie> getManaGeniesByAttribute(String attribute) {
         System.out.println("mana " + attribute);
         return manaGenieDao.findNameByAttribute(attribute);
     }
