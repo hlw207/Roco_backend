@@ -31,4 +31,10 @@ public class GenieServiceImpl implements GenieService {
         System.out.println("mana " + attribute);
         return manaGenieDao.findNameByAttribute(attribute);
     }
+
+    @Override
+    public List<ManaGenie> getManaGeniesByGrade(double grade) {
+        System.out.println(grade);
+        return manaGenieDao.findNameByGrade(grade);
+    }
 }

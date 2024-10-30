@@ -26,4 +26,9 @@ public class GenieController {
     public List<ManaGenie> getManaGeniesByAttribute(@RequestParam String attribute){
         return genieService.getManaGeniesByAttribute(attribute);
     }
+
+    @GetMapping("/mana/grade")
+    public List<ManaGenie> getManaGeniesByGrade(@RequestParam double grade){
+        return genieService.getManaGeniesByGrade(grade);
+    }
 }

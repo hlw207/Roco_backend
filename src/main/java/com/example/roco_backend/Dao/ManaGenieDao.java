@@ -16,4 +16,7 @@ public interface ManaGenieDao extends CrudRepository<ManaGenieEntity, ManaGenieI
 
     @Query("select new com.example.roco_backend.Pojo.Vo.ManaGenie(attribute, viceAttribute, genieName, grade, extra) from ManaGenieEntity where attribute = :attribute or viceAttribute = :attribute order by grade DESC")
     public List<ManaGenie> findNameByAttribute(@Param("attribute") String attribute);
+
+    @Query("select new com.example.roco_backend.Pojo.Vo.ManaGenie(attribute, viceAttribute, genieName, grade, extra) from ManaGenieEntity where grade = :grade")
+    public List<ManaGenie> findNameByGrade(@Param("grade") double grade);
 }
