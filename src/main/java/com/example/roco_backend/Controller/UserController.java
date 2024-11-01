@@ -28,6 +28,11 @@ public class UserController {
         return userService.isExist(account);
     }
 
+    @GetMapping("/getName")
+    public String getName(@RequestParam String account){
+        return userService.getName(account);
+    }
+
     @PostMapping("/change")
     public void changeInfo(@RequestParam String name, @RequestParam String account){
         userService.changeName(name, account);

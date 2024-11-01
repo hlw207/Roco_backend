@@ -8,24 +8,29 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class bpEntity {
+public class ChoiceEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
-    private Long blueId;
+    private Long bpId;
 
-    private Long redId;
+    private int round;
 
-    private String description;
+    private int position;
 
-    private List<Integer> banNums;
+    private String attribute;
 
+    private String viceAttribute;
+
+    private String genieName;
+
+    private double grade;
+
+    private String extra;
 }

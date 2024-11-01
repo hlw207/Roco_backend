@@ -6,4 +6,6 @@ public interface UserService {
     public boolean register(String account, String password);
     public boolean isExist(String account);
     public void changeName(String name, String account);
+
+    public String getName(String account);
 }

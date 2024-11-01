@@ -45,4 +45,10 @@ public class UserServiceImpl implements UserService {
         userEntity.setName(name);
         userDao.save(userEntity);
     }
+
+    @Override
+    public String getName(String account) {
+        UserEntity userEntity = userDao.findByAccount(account);
+        return userEntity.getName();
+    }
 }
