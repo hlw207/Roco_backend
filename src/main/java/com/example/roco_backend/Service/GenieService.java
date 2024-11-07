@@ -16,4 +16,7 @@ public interface GenieService {
 
     public List<ManaGenie> getManaGeniesByGrade(double grade);
 
+    public Genie getGenieByName(String genieName);
+
+    public ManaGenie getManaGenieByName(String genieName, double grade);
 }

@@ -5,6 +5,8 @@ import com.example.roco_backend.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(originPatterns = "*", allowCredentials = "true")
 @RequestMapping("/user")
@@ -38,4 +40,8 @@ public class UserController {
         userService.changeName(name, account);
     }
 
+    @GetMapping("/all")
+    public List<UserEntity> getAllUser(){
+        return userService.getAll();
+    }
 }

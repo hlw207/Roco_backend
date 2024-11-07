@@ -13,4 +13,6 @@ public interface GenieDao extends CrudRepository<GenieEntity, String> {
 
     @Query("select new com.example.roco_backend.Pojo.Vo.Genie(attribute, viceAttribute ,genieName, grade) from GenieEntity where attribute = :attribute or viceAttribute = :attribute order by grade DESC")
     public List<Genie> findNameByAttribute(@Param("attribute") String attribute);
+
+    public GenieEntity findByGenieName(String genieName);
 }

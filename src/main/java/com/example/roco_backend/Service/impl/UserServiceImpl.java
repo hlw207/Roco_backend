@@ -6,6 +6,8 @@ import com.example.roco_backend.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -50,5 +52,10 @@ public class UserServiceImpl implements UserService {
     public String getName(String account) {
         UserEntity userEntity = userDao.findByAccount(account);
         return userEntity.getName();
+    }
+
+    @Override
+    public List<UserEntity> getAll() {
+        return (List<UserEntity>) userDao.findAll();
     }
 }
