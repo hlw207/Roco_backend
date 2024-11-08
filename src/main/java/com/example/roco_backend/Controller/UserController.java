@@ -22,7 +22,8 @@ public class UserController {
 
     @GetMapping("/register")
     public boolean register(@RequestParam String account, @RequestParam String password){
-        return userService.register(account, password);
+        return false;
+//        return userService.register(account, password);
     }
 
     @GetMapping("/name")
