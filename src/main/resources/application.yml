@@ -22,9 +22,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://47.93.77.149:5432/roco
+    url: jdbc:postgresql://106.14.91.142:5432/roco
     username: postgres
-    password: HLW3812oo16!
+    password: 123456
 
   jpa:
     show-sql: true
